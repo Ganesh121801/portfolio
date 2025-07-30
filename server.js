@@ -1,14 +1,14 @@
 const express = require("express");
-const router = express.Router();
+const path = require("path");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
-require('dotenv').config();
+require("dotenv").config();
 
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use("/", router);
 
+// --- Contact Email Setup ---
 const contactEmail = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -21,16 +21,17 @@ contactEmail.verify((error) => {
   if (error) {
     console.log("Error with email configuration:", error);
   } else {
-    console.log("Ready to Send");
+    console.log("Ready to Send Emails");
   }
 });
 
-router.post("/contact", (req, res) => {
+// --- Contact Route ---
+app.post("/contact", (req, res) => {
   const name = `${req.body.firstName} ${req.body.lastName}`;
   const email = req.body.email;
   const message = req.body.message;
   const phone = req.body.phone;
-  
+
   const mail = {
     from: `"${name}" <${email}>`,
     to: "utmsg1218@gmail.com",
@@ -43,20 +44,24 @@ router.post("/contact", (req, res) => {
       <p><strong>Message:</strong> ${message}</p>
     `,
   };
-  
+
   contactEmail.sendMail(mail, (error) => {
     if (error) {
       console.log("Error sending email:", error);
-      res.status(500).json({ 
-        code: 500, 
-        status: "Error sending message",
-        error: error.message
-      });
+      res.status(500).json({ code: 500, status: "Error sending message", error: error.message });
     } else {
       res.json({ code: 200, status: "Message Sent" });
     }
   });
 });
 
-const PORT = 5000;
-app.listen(PORT, () => console.log(`Server Running on port ${PORT}`));
+// --- Serve React frontend ---
+app.use(express.static(path.join(__dirname, "build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
+
+// --- Start Server ---
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
