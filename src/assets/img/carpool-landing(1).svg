@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 519 380">
+    <!-- Background -->
+    <rect width="519" height="380" fill="#f8faff"/>
+    
+    <!-- Header Navigation -->
+    <rect x="0" y="0" width="519" height="40" fill="#ffffff" stroke="#e5e5e5" stroke-width="1"/>
+    
+    <!-- Logo -->
+    <text x="25" y="27" font-family="Arial" font-size="16" font-weight="bold">
+        Ride<tspan fill="#2563eb">Share</tspan>
+    </text>
+    
+    <!-- Navigation Links -->
+    <text x="380" y="25" font-family="Arial" font-size="12" fill="#333">Home</text>
+    
+    <text x="440" y="27" font-family="Arial" font-size="12" fill="#333">About</text>
+    
+    <!-- Buttons -->
+    <rect x="430" y="10" width="40" height="20" rx="4" fill="#2563eb"/>
+    <text x="438" y="24" font-family="Arial" font-size="11" fill="white">Login</text>
+    
+    <rect x="475" y="10" width="35" height="20" rx="4" fill="#1e40af"/>
+    <text x="481" y="24" font-family="Arial" font-size="11" fill="white">Start</text>
+
+    <!-- Hero Section -->
+    <g transform="translate(25, 60)">
+        <text x="0" y="25" font-family="Arial" font-size="22" font-weight="bold" fill="#1e293b">
+            Share Your Ride,
+        </text>
+        <text x="0" y="55" font-family="Arial" font-size="22" font-weight="bold" fill="#1e293b">
+            Save The <tspan fill="#2563eb">Planet</tspan>
+        </text>
+        
+        <text x="0" y="85" font-family="Arial" font-size="11" fill="#64748b" width="200">
+            Connect with fellow travelers, share costs,
+        </text>
+        <text x="0" y="100" font-family="Arial" font-size="11" fill="#64748b" width="200">
+            and reduce your carbon footprint
+        </text>
+        
+        <!-- Call to Action Button -->
+        <rect x="0" y="115" width="110" height="30" rx="15" fill="#2563eb"/>
+        <text x="20" y="135" font-family="Arial" font-size="12" fill="white" font-weight="bold">Find a Ride</text>
+    </g>
+    
+    <!-- Car Illustration -->
+    <g transform="translate(280,60) scale(0.45)">
+        <path d="M50,120 Q100,120 150,120 Q200,120 250,120 Q300,120 350,120 L350,180 Q300,180 250,180 Q200,180 150,180 Q100,180 50,180 Z" fill="#2563eb"/>
+        <circle cx="100" cy="180" r="30" fill="#1e293b"/>
+        <circle cx="300" cy="180" r="30" fill="#1e293b"/>
+        <path d="M100,120 L150,80 L250,80 L300,120" fill="#bfdbfe"/>
+    </g>
+
+    <!-- Features Section -->
+    <text x="259" y="210" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#1e293b">
+        Why Choose RideShare?
+    </text>
+
+    <!-- Feature Cards -->
+    <g transform="translate(25,230)">
+        <rect width="150" height="110" rx="5" fill="white" stroke="#e5e5e5" stroke-width="1"/>
+        <circle cx="75" cy="35" r="15" fill="#bfdbfe"/>
+        <path d="M68,35 L82,35 M75,28 L75,42" stroke="#2563eb" stroke-width="2"/>
+        <text x="75" y="70" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Save Money</text>
+        <text x="75" y="90" text-anchor="middle" font-family="Arial" font-size="10" fill="#64748b">Split travel costs</text>
+    </g>
+
+    <g transform="translate(185,230)">
+        <rect width="150" height="110" rx="5" fill="white" stroke="#e5e5e5" stroke-width="1"/>
+        <circle cx="75" cy="35" r="15" fill="#bfdbfe"/>
+        <path d="M68,30 Q75,40 82,30" stroke="#2563eb" stroke-width="2" fill="none"/>
+        <text x="75" y="70" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Eco-Friendly</text>
+        <text x="75" y="90" text-anchor="middle" font-family="Arial" font-size="10" fill="#64748b">Reduce emissions</text>
+    </g>
+
+    <g transform="translate(345,230)">
+        <rect width="150" height="110" rx="5" fill="white" stroke="#e5e5e5" stroke-width="1"/>
+        <circle cx="75" cy="35" r="15" fill="#bfdbfe"/>
+        <path d="M68,35 C73,30 77,40 82,35" stroke="#2563eb" stroke-width="2" fill="none"/>
+        <text x="75" y="70" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold">Community</text>
+        <text x="75" y="90" text-anchor="middle" font-family="Arial" font-size="10" fill="#64748b">Meet new people</text>
+    </g>
+
+    <!-- Search Section -->
+    <rect x="25" y="350" width="469" height="20" rx="10" fill="white" stroke="#e5e5e5" stroke-width="1"/>
+    <text x="45" y="364" font-family="Arial" font-size="11" fill="#64748b">Where are you going?</text>
+    <circle cx="470" cy="360" r="8" fill="#2563eb"/>
+    <path d="M467,360 L473,360 M470,357 L470,363" stroke="white" stroke-width="1"/>
+</svg>
