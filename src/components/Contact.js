@@ -38,34 +38,29 @@ export const Contact = () => {
 
     setButtonText("Sending...");
     
-    try {
-      let response = await fetch("https://portfolio-original.onrender.com/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json;charset=utf-8",
-        },
-        body: JSON.stringify(formDetails),
-      });
+   try {
+  let response = await fetch("https://portfolio-original.onrender.com/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json;charset=utf-8",
+    },
+    body: JSON.stringify(formDetails),
+  });
 
-      let result = await response.json();
+  let result = await response.json();
 
-      if (result.code === 200) {
-        setFormDetails(formInitialDetails);
-        setStatus({ success: true, message: 'Message sent successfully!' });
-      } else {
-        setStatus({ 
-          success: false, 
-          message: result.error || 'Something went wrong, please try again later.'
-        });
-      }
-    } catch (error) {
-      setStatus({ 
-        success: false, 
-        message: 'Failed to connect to the server. Please try again later.'
-      });
-    } finally {
-      setButtonText("Send");
-    }
+  if (result.code === 200) {
+    setFormDetails(formInitialDetails);
+    setStatus({ success: true, message: 'Message sent successfully!' });
+  } else {
+    setStatus({
+      success: false,
+      message: result.error || 'Something went wrong, please try again later.'
+    });
+  }
+} finally {
+  setButtonText("Send");
+}
   };
 
   return (
