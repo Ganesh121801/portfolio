@@ -61,7 +61,7 @@ export const Banner = () => {
                   </p>
                   <div className="button-group">
                     <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
-                    <a href="https://drive.google.com/file/d/1MgWfCZxH0K6Vn7IiD86FXmBOTiCdybRc/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                    <a href="https://drive.google.com/file/d/15B1i4NVRWdNJ81X4NTHxG_VJ-kzvjuEQ/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                       <button>View My Resume</button>
                     </a>
                   </div>
