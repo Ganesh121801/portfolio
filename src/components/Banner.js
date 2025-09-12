@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -49,33 +48,36 @@ export const Banner = () => {
 
   return (
     <section className="banner" id="home">
-  <Container>
-    <Row className="aligh-items-center">
-      <Col xs={12} md={6} xl={7}>
-        <TrackVisibility>
-          {({ isVisible }) =>
-            <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-              <span className="tagline">Welcome to my Portfolio</span>
-              <h1>{`Hi! I'm Ganesh More`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Software Engineer" ]'><span className="wrap">{text}</span></span></h1>
-              <p>
-                I'm a passionate Full Stack Developer with a strong background in both frontend and backend development. I specialize in creating modern web applications and intuitive user interfaces. With experience in Full Stack technologies like React.js, Node.js, and Express.js, I aim to develop impactful solutions that enhance user experiences and drive innovation.
-              </p>
-              <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
-            </div>
-          }
-        </TrackVisibility>
-      </Col>
-      <Col xs={12} md={6} xl={5}>
-        <TrackVisibility>
-          {({ isVisible }) =>
-            <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-          
-            </div>}
-        </TrackVisibility>
-      </Col>
-    </Row>
-  </Container>
-</section>
-
+      <Container>
+        <Row className="aligh-items-center">
+          <Col xs={12} md={6} xl={7}>
+            <TrackVisibility>
+              {({ isVisible }) =>
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  <span className="tagline">Welcome to my Portfolio</span>
+                  <h1>{`Hi! I'm Ganesh More`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Software Engineer" ]'><span className="wrap">{text}</span></span></h1>
+                  <p>
+                    I'm a passionate Full Stack Developer with a strong background in both frontend and backend development. I specialize in creating modern web applications and intuitive user interfaces. With experience in Full Stack technologies like React.js, Node.js, and Express.js, I aim to develop impactful solutions that enhance user experiences and drive innovation.
+                  </p>
+                  <div className="button-group">
+                    <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                    <a href="https://drive.google.com/file/d/1MgWfCZxH0K6Vn7IiD86FXmBOTiCdybRc/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                      <button>View My Resume</button>
+                    </a>
+                  </div>
+                </div>
+              }
+            </TrackVisibility>
+          </Col>
+          <Col xs={12} md={6} xl={5}>
+            <TrackVisibility>
+              {({ isVisible }) =>
+                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+                </div>}
+            </TrackVisibility>
+          </Col>
+        </Row>
+      </Container>
+    </section>
   )
 }

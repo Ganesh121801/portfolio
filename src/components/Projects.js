@@ -3,6 +3,9 @@ import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/job.svg";
 import projImg2 from "../assets/img/carpool-landing(1).svg";
 import projImg3 from "../assets/img/project-img1.svg";
+import projImg4 from "../assets/img/image5.png";
+import projImg5 from "../assets/img/image6.png";
+import projImg6 from "../assets/img/image7.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -30,6 +33,29 @@ export const Projects = () => {
       deployedLink: null, // Optional: No deployed link
       Repository: "https://github.com/Ganesh121801/Video-Recommendation-Systems",
     },
+    {
+      title: "SchedulEase – Appointment Scheduling Application",
+      description: "Developed a full-stack scheduling platform with event creation, availability management, booking system, and Google Calendar integration.",
+      imgUrl: projImg4,
+      deployedLink: "https://calendly-an-appointment-scheduling.vercel.app/", // Replace with actual deployed link
+      Repository: "https://github.com/Ganesh121801/calendly-An-appointment-Scheduling-Application", // Replace if needed
+      TechStack: "Next.js, Prisma, NeonDB (PostgreSQL), Google API"
+    },
+    {
+    title: "Morekart – E-commerce Web Application",
+    description: "Built a full-stack e-commerce platform with product listings, cart functionality, user authentication, and payment integration.",
+    imgUrl: projImg5, // Add a new image in ../assets/img for Morekart
+    Repository: "https://github.com/Ganesh121801/Morekart",
+    TechStack: "MERN Stack, Stripe API, JWT Authentication"
+  },
+  {
+  title: "Saarthi – EdTech Platform",
+  description: "Developed an educational platform for course management, interactive learning, and student progress tracking, with secure user authentication and responsive design.",
+  imgUrl: projImg6, // Add a new image in ../assets/img for Saarthi
+  Repository: "https://github.com/Ganesh121801/Saarthi",
+  TechStack: "React.js, Node.js, Express, SQL Database, JWT Authentication"
+}
+
   ];
   
 
