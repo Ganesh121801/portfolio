@@ -52,7 +52,7 @@ export const Projects = () => {
   title: "Saarthi – EdTech Platform",
   description: "Developed an educational platform for course management, interactive learning, and student progress tracking, with secure user authentication and responsive design.",
   imgUrl: projImg6, // Add a new image in ../assets/img for Saarthi
-  Repository: "https://github.com/Ganesh121801/Saarthi",
+  Repository: "https://github.com/Ganesh121801/Saarthi---An-Edtech-Platform-",
   TechStack: "React.js, Node.js, Express, SQL Database, JWT Authentication"
 }
 
